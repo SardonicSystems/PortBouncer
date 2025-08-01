@@ -1,0 +1,11 @@
+# Sardonic System's Port Bouncer
+Bounce the ports of your anicent ADTRAN NetVanta switch like a champion with this script!
+I created this little thing becuase I often have to bounce the switch ports via ssh repeatedly to resolve intermittant issues with some unruly Proxmox VE hosts.
+
+## How to use
+bounce_vhosts.sh calls the nv_portpouncer.sh script
+So, first run bounce_vhosts.sh at the shell. You'll then select which host you want to bounce.
+Each host is associated to an interface name. That name is saved to an evionrment variable.
+The nv_portbouncer.sh script is called and the envionrment variable is read into it to then bounce the appropriate port, or ports.
+
+Thats it!
